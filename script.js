@@ -79,6 +79,7 @@ document.getElementById('open-invite-button').addEventListener('click', ()=>{
 		document.getElementById('loading-screen'),500
 	)
 	document.getElementsByTagName('audio')[0].play()
+	document.getElementsByTagName('audio')[0].volume = 0.5
 })
 
 function fadeOut( elem, ms )
