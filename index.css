@@ -295,10 +295,10 @@ p{
 	}
 	#home #CS-logo{
 		max-height: 100vh;
-		width: 24vw;
+		width: 20vw;
 		position: absolute;
 		top: 50vh;
-		right: 18vw;
+		right: 20vw;
 		left: unset;
 		transform: translate(0, -90%);
 	}
