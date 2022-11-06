@@ -13,9 +13,9 @@
 	src: url('./Assets/Typey.otf');
 }
 @font-face {
-	font-family: avigea;
+	font-family: hashtag;
 	/* src: url('./Assets/FeFCrm2.ttf'); */
-	src: url('./Assets/Avigea.otf');
+	src: url('./Assets/ArsenicaTrial-Regular.ttf');
 }
 @font-face {
 	font-family: garden;
@@ -350,7 +350,7 @@ p{
 		transform: translate(0, -90%);
 	}
 	#home #hashtag{
-		font-family: avigea;
+		font-family: hashtag;
 		width: 20vw;
 		position: absolute;
 		top: 49vh;
@@ -712,7 +712,7 @@ iframe{
 #maker{
 	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	position: absolute;
-	width: 100vw;
+	width: 100%;
 	bottom: 4vh;
 }
 
