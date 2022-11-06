@@ -108,7 +108,7 @@ function fadeIn( elem, ms )
 function dropOneFoolInHaldi(){
 	const box = document.getElementById(`haldi-invite`).getElementsByClassName('box')[0]
 	const img = document.createElement('img')
-	img.src = '../Assets/genda-fool.png'
+	img.src = '../../Assets/genda-fool.png'
 	img.className = 'genda-fool'
 	let left = Math.random()*85
 	if (left>0.3&&left<0.55){
@@ -125,7 +125,7 @@ var petalDropCount = 1
 function dropOnePetalInWedding(){
 	const box = document.getElementById(`wedding-invite`).getElementsByClassName('droppings')[0]
 	const img = document.createElement('img')
-	img.src = `../Assets/p${petalDropCount%4 +1}.png`
+	img.src = `../../Assets/p${petalDropCount%4 +1}.png`
 	img.className = 'petal'
 	let left = Math.random()*155
 	// if (left>0.3&&left<0.55){
