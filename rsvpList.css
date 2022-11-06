@@ -1,0 +1,44 @@
+body{
+	font-family: sans-serif;
+}
+
+h2{
+	color: rgba(0,0,0,0.6);
+	font-size: 1.2em;
+	max-width: 80%;
+	margin-bottom: 5px;
+}
+
+a{
+	font-size: 0.8em;
+}
+
+li{
+	color: rgba(255,0,0,0.55);;
+}
+
+.attending{
+	color: green;
+}
+
+#container{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: baseline;
+	gap: 20px;
+}
+
+p{
+	max-height: 50vh;
+	overflow-y: scroll;
+}
+
+.family{
+	background-color: rgb(200, 230, 255);
+	min-height: 280px;
+	min-width: 280px;
+	padding: 10px;
+	padding-left: 25px;
+	flex-basis: min-content;
+}
