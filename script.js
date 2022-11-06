@@ -23,7 +23,7 @@ new fullpage('#fullpage', {
 	onLeave: function(origin, destination, direction, trigger){
 		// if(origin=='home')
 		// scene.style.top='50px'
-
+		document.getElementsByTagName('audio')[0].play()
 		if(destination.anchor=='mehendi' || destination.anchor=='haldi' || destination.anchor=='wedding') 
 		{
 			let textElements = document.getElementById(`${destination.anchor}-invite`).getElementsByClassName('content')[0].children
@@ -46,8 +46,8 @@ new fullpage('#fullpage', {
 window.addEventListener('load',()=>{
 	fadeOut(
 		document.getElementById('loading-screen'),500
-
 	)
+	document.getElementsByTagName('audio')[0].play()
 })
 
 function fadeOut( elem, ms )
