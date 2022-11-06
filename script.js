@@ -39,10 +39,17 @@ new fullpage('#fullpage', {
 					},1500)
 				)
 			}
-			if(destination.anchor=='wedding'){
+			else if(destination.anchor=='wedding'){
 				dropIntervals.push(
 					setInterval(()=>{
 						dropOnePetalInWedding()
+					},250)
+				)
+			}
+			else if(destination.anchor=='mehendi'){
+				dropIntervals.push(
+					setInterval(()=>{
+						dropOneLeafInMehendi()
 					},250)
 				)
 			}
@@ -60,8 +67,10 @@ window.addEventListener('load',()=>{
 	// )
 	fadeOut(document.getElementsByClassName('dank-ass-loader')[0],500)
 	setTimeout(()=>{
-		fadeIn(document.getElementById('CS-logo-loading'),800)
+		fadeIn(document.getElementById('CS-logo-loading'),600)
 		fadeIn(document.getElementById('open-invite-button'), 1200)
+		fadeIn(document.getElementById('loading-screen-bg'), 2400)
+		fadeIn(document.getElementById('loading-screen').getElementsByTagName('span')[0], 900)
 	},500)
 })
 
@@ -137,5 +146,24 @@ function dropOnePetalInWedding(){
 	img.style.left = `${left}vw`
 	img.style.animationName = `falling${petalDropCount%3 +1}`
 	petalDropCount++
+	setTimeout(()=>box.appendChild(img), Math.random()*2000)
+}
+
+var leafDropCount = 1
+function dropOneLeafInMehendi(){
+	const box = document.getElementById(`mehendi-invite`).getElementsByClassName('droppings')[0]
+	const img = document.createElement('img')
+	img.src = `../../Assets/l${leafDropCount%4 +1}.png`
+	img.className = 'petal'
+	let left = Math.random()*155
+	// if (left>0.3&&left<0.55){
+	// 	if(left>0.42)
+	// 		left+= (Math.random())*85
+	// 	else
+	// 		left-= (Math.random())*85
+	// }
+	img.style.left = `${left}vw`
+	img.style.animationName = `falling${leafDropCount%3 +1}`
+	leafDropCount++
 	setTimeout(()=>box.appendChild(img), Math.random()*2000)
 }

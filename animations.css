@@ -163,3 +163,24 @@
         opacity: 0;
     }
 }
+
+@keyframes scroll-arrow-anim {
+	0%{
+		transform: translateY(0);
+	}
+	12%{
+		transform: translateY(10px);
+	}
+	25%{
+		transform: translateY(3px);
+	}
+	37%{
+		transform: translateY(10px);
+	}
+	50%{
+		transform: translateY(0);
+	}
+	100%{
+		transform: translateY(0);
+	}
+}

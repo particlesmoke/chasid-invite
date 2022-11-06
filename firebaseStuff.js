@@ -1,5 +1,7 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js'
 import { getFirestore, getDocs, collection, doc, getDoc, setDoc, updateDoc } from 'https://www.gstatic.com/firebasejs/9.12.1/firebase-firestore.js'
+var presenceMessageVisible = 0
+var savedMessageVisible = 0
 
 const firebaseConfig = {
 	apiKey: "AIzaSyB2hU6LFK6A6LeT75U4hNbvdHSCJqpWOQg",
@@ -18,7 +20,8 @@ const docRef = doc(db, "invitees", endpoint);
 const docSnap = (await getDoc(docRef)).data();
 const members = docSnap.Members
 
-document.getElementById("message-textarea").innerHTML= docSnap.Message
+if(docSnap.Message != null && docSnap.Message!='')
+	document.getElementById("message-textarea").innerHTML= docSnap.Message
 
 const form = document.getElementById('presence-marker-form')
 
@@ -32,6 +35,10 @@ for(let member in members){
 
 function addMember(name, checked){
 	checkedState[name] = checked
+	// console.log("ok", name, checked)
+	if(checked==true){
+		addPresenceMessage()
+	}
 	const div = document.createElement('div')
 	div.className = 'member-checkbox-div'
 	const inputEl = document.createElement('input')
@@ -39,11 +46,26 @@ function addMember(name, checked){
 	inputEl.value = name
 	inputEl.checked = checked
 	inputEl.addEventListener('click', ()=>{
+		
 		for(let x in checkboxes){
 			checkedState[checkboxes[x].value] = checkboxes[x].checked
 		}
 		updateDoc(docRef, {Members:checkedState})
 		console.log(checkedState)
+
+		let anyComing = false
+		for(let name in checkedState){
+			if(checkedState[name]==true){
+				anyComing = true
+			}
+		}
+		if(anyComing){
+			addPresenceMessage()
+		}
+		else{
+			if(presenceMessageVisible)
+				removePresenceMessage()
+		}
 	})
 	div.appendChild(inputEl)
 	checkboxes.push(inputEl)
@@ -55,10 +77,45 @@ function addMember(name, checked){
 
 document.getElementById("message-save-button").addEventListener('click',()=>{
 	let message = document.getElementById("message-textarea").value
+	if(message!=null && message!='')
+	{
+		addSavedMessage("Thanks for your message! It has been saved")
+	}
+	else{
+		addSavedMessage("Please type a message before saving")
+	}
 	updateDoc(docRef, {Message:message})
-	console.log(message)
 })
 
+
+function addPresenceMessage(){
+	console.log("hmm", presenceMessageVisible)
+
+	if(presenceMessageVisible!=0) return
+	const content = document.getElementById('rsvp-page').getElementsByClassName('content')[0]
+	const p = document.createElement('p')
+	p.innerHTML = "Thanks! We have recorded your presence"
+	p.id = 'presence-message'
+	content.appendChild(p)
+	presenceMessageVisible++
+}
+
+function removePresenceMessage(){
+	presenceMessageVisible = 0
+	document.getElementById('presence-message').remove()
+}
+
+function addSavedMessage(text){
+	if(savedMessageVisible!=0){
+		document.getElementById('saved-message').remove()
+	}
+	const content = document.getElementById('message-page').getElementsByClassName('content')[0]
+	const p = document.createElement('p')
+	p.innerHTML = text
+	p.id = 'saved-message'
+	content.appendChild(p)
+	savedMessageVisible++
+}
 
 // const querySnapshot = await getDocs(collection(db, "invitees"));
 // querySnapshot.forEach((doc) => {

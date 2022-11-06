@@ -12,6 +12,17 @@
 	/* src: url('./Assets/FeFCrm2.ttf'); */
 	src: url('./Assets/Typey.otf');
 }
+@font-face {
+	font-family: avigea;
+	/* src: url('./Assets/FeFCrm2.ttf'); */
+	src: url('./Assets/Avigea.otf');
+}
+@font-face {
+	font-family: garden;
+	/* src: url('./Assets/FeFCrm2.ttf'); */
+	src: url('./Assets/GardenParty_PERSONAL_USE_ONLY.otf');
+}
+
 
 html, body{
 	height: 100%;
@@ -77,16 +88,16 @@ p{
 	top: 30vh;
 	height: 150px;
 	left: 50vw;
-	transform: translate(-55%, -20%);
+	transform: translate(-50%, -20%);
 }
 
 #loading-screen button{
 	font-family: little-serif;
 	opacity: 0;
 	position: absolute;
-	top: 45vh;
+	bottom: 20vh;
 	left: 50vw;
-	transform: translate(-55%, 100%);
+	transform: translate(-50%, 100%);
 	background-color:  rgb(185, 117, 29) ;
 	border: none;
 	padding-bottom: 12px;
@@ -98,6 +109,23 @@ p{
 	color: white;
 	font-size: 0.8em;
 	box-shadow: #00000037 3px 2px 4px;
+}
+
+#loading-screen span{
+	opacity: 0;
+	font-family: garden;
+	font-size: 1.6em;
+	padding-top: 40px;
+	position: absolute;
+	left: 50vw;
+	top:42vh;
+	transform: translate(-50%, 0);
+	text-align: center;
+}
+@media (min-aspect-ratio: 1/1) { 
+	#loading-screen span{
+		font-size: 2em;
+	}
 }
 
 
@@ -154,14 +182,33 @@ p{
 	font-family: little-serif;
 }
 
+.down-arrow{
+	position: absolute;
+    width: 100%;
+    bottom: 20px;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+	font-size: 0.7em;
+}
+
+.down-arrow img{
+	width: 30px;
+	animation-name: scroll-arrow-anim;
+	animation-duration: 3s;
+	animation-delay: 2s;
+	animation-iteration-count: infinite;
+}
+
 #home #location-and-time{
 	width: 100%;
 	position: absolute;
-	bottom: 7vh;
+	bottom: 8vh;
 	text-align: center;
 	line-height: 1.2;
 	font-size: 0.8em;
 	z-index: 2;
+	color: #b42b2b;
 }
 
 
@@ -297,7 +344,16 @@ p{
 		max-height: 100vh;
 		width: 20vw;
 		position: absolute;
-		top: 50vh;
+		top: 45vh;
+		right: 20vw;
+		left: unset;
+		transform: translate(0, -90%);
+	}
+	#home #hashtag{
+		font-family: avigea;
+		width: 20vw;
+		position: absolute;
+		top: 49vh;
 		right: 20vw;
 		left: unset;
 		transform: translate(0, -90%);
@@ -359,7 +415,7 @@ p{
 		width: 60%;
 		right: 0;
 		font-size: 1em;
-		top: 55vh;
+		top: 53vh;
 	}
 	#home #anchor-links{
 		top: 68vh;
@@ -466,6 +522,17 @@ p{
 	box-shadow: 0px 0px 11px 0px #585858;
 	z-index: 1;
 }
+.bg{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #fffce9;
+	background-image: url('./Assets/invite-bg-mc.png');
+	background-size: contain;
+	background-blend-mode: multiply;
+}
 .droppings{
 	position: absolute;
 	top: 0;
@@ -485,6 +552,7 @@ p{
 
 .invite-page .date-and-time p{
 	font-size: 0.8em;
+	color: #b42b2b;
 }
 
 .invite-page #ganesha-image{
@@ -495,7 +563,7 @@ p{
 	/* transform: translateX(-16.7%) translateY(-12.7%); */
 }
 
-.invite-page .line-break{
+.line-break{
 	width: 50vh;
 	max-width: 50vw;
 }
@@ -537,25 +605,36 @@ p{
 	font-family: very-cursive;
 }
 
-.invite-page .content>.little-serif-big{
+.content>.little-serif-big{
 	font-family: little-serif;
-	font-size: 1.2em;
+	font-size: 1.2em !important;
+	color: #b42b2b;
 }
 
 .genda-fool{
 	width: 4vh;
 	position: absolute;
-	top:-10vh;
+	top:-4vh;
 	z-index: 4;
 	animation-name: fall;
 	animation-duration: 5s;
 	animation-fill-mode: forwards;
-	animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+	animation-timing-function: ease-in;
 }
 .petal{
 	width: 3vh;
 	position: absolute;
-	top:-10vh;
+	top:-3vh;
+	z-index: 4;
+	/* animation-name: fall; */
+	animation-duration: 5s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-in;
+}
+.leaf{
+	width: 4vh;
+	position: absolute;
+	top:-4vh;
 	z-index: 4;
 	/* animation-name: fall; */
 	animation-duration: 5s;
@@ -564,17 +643,24 @@ p{
 }
 
 @media (min-aspect-ratio: 1/1) { 
-	.invite-page .content>.little-serif-big{
-		font-size: 1.5em;
+	.content>.little-serif-big{
+		font-size: 1.5em !important;
 	}
 }
 
 #message-textarea{
-	width: 80vw;
+	width: 70vw;
 	height: 300px;
-	font-size: 1.3em;
+	font-size: 1em;
 	white-space: pre-wrap;
 	padding: 10px;
+}
+
+@media (min-aspect-ratio: 1/1) { 
+	#message-textarea{
+		width: 50vw;
+		font-size: 1.3em;
+	}
 }
 #message-save-button{
 	margin-top: 20px;
@@ -587,6 +673,8 @@ p{
 	padding-left: 1em;
 	padding-right: 1em;
 	color: white;
+	box-shadow: #00000037 3px 2px 4px;
+
 }
 
 #presence-marker-form{
@@ -615,16 +703,17 @@ iframe{
 }
 
 #map{
+	margin-top: 0;
 	height: 70vh;
     width: 80vw;
     margin-left: 10vw;
 }
 
 #maker{
-	font-family: sans-serif;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	position: absolute;
 	width: 100vw;
-	bottom: 2vh;
+	bottom: 4vh;
 }
 
 
