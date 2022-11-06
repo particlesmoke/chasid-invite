@@ -34,7 +34,7 @@ function addFamily(endpoint, family){
 	const nameEl = document.createElement('h2')
 	const inviteLinkEl = document.createElement('a')
 	inviteLinkEl.innerText = 'Link to invite'
-	inviteLinkEl.href = '/'+endpoint
+	inviteLinkEl.href = '/invite/'+endpoint
 	nameEl.innerText = family.FamilyName
 	const messageEl = document.createElement('p')
 	messageEl.innerText = family.Message
