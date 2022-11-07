@@ -166,7 +166,7 @@
      0% {
         transform:
             translate3d(0,0,0)
-            rotate3d(1,1,1,90deg);
+            rotate3d(1,1,1,45deg);
 		opacity: 1;
     }
 	70% {
@@ -176,7 +176,7 @@
     100% {
         transform:
             translate3d(-30vw,100vh,0)
-            rotate3d(1,1,1,180deg);
+            rotate3d(1,-1,1,130deg);
         opacity: 0;
     }
 }

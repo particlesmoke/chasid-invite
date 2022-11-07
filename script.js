@@ -311,7 +311,8 @@ function fadeIn( elem, ms )
 
 
 function dropOneFoolInHaldi(){
-	const box = document.getElementById(`haldi-invite`).getElementsByClassName('box')[0]
+	// const box = document.getElementById(`haldi-invite`).getElementsByClassName('box')[0]
+	const box = document.getElementById('haldi-invite').getElementsByClassName('droppings')[0]
 	const img = document.createElement('img')
 	img.src = '../../Assets/genda-fool.png'
 	img.className = 'genda-fool'
