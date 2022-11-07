@@ -139,7 +139,7 @@ function addSavedMessage(text){
 // })
 
 function confettiInPresence(){
-	tsParticles.load("presence-content", {
+	tsParticles.load("rsvp-page", {
 	"fullScreen": {
 	  "zIndex": 1
 	},
