@@ -1,7 +1,8 @@
 @font-face {
 	font-family: very-cursive;
-	src: url('./Assets/adelia.otf');
-  }
+	src: url('./Assets/bellania.ttf');
+	/* src: url('./Assets/adelia.otf'); */
+}
 @font-face {
 	font-family: little-serif-italics;
 	/* src: url('./Assets/FeFCit2.ttf'); */
@@ -139,7 +140,7 @@ p{
 }
 
 .section:not(.invite-page) .content{
-	margin-top: 0;
+	top: 8vh;
 	display: flex;
 	align-items: center;
 	flex-direction: column;

@@ -344,7 +344,7 @@ function dropOnePetalInWedding(){
 	// 		left-= (Math.random())*85
 	// }
 	img.style.left = `${left}vw`
-	if(jscd.os.startsWith("i")){
+	if(jscd.os == 'iOS'){
 		img.style.animationName = `falling-basic${petalDropCount%5 +1}`
 	}
 	else{
@@ -368,7 +368,7 @@ function dropOneLeafInMehendi(){
 	// 		left-= (Math.random())*85
 	// }
 	img.style.left = `${left}vw`
-	if(jscd.os.startsWith("i")){
+	if(jscd.os == 'iOS'){
 		img.style.animationName = `falling-basic${leafDropCount%5 +1}`
 	}
 	else{
