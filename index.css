@@ -561,8 +561,6 @@ p{
 	background-blend-mode: multiply;
 }
 .droppings{
-	-webkit-backface-visibility: hidden;
-	        backface-visibility: hidden;
 	position: absolute;
 	top: 0;
 	bottom: 0;
