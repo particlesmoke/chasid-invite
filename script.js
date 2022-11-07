@@ -207,6 +207,7 @@ new fullpage('#fullpage', {
 	licenseKey:'ok',
 	navigation: true,
 	navigationPosition: 'right',
+	recordHistory: false,
 	// autoScrolling:true,
 	// scrollHorizontally: true
 	onLeave: function(origin, destination, direction, trigger){

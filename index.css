@@ -100,7 +100,7 @@ p{
 	left: 50vw;
 	transform: translate(-50%, 100%);
 	background-color:  rgb(185, 117, 29) ;
-	border: none;
+	/* border: none; */
 	padding-bottom: 12px;
 	padding-top: 9px;
 	padding-left: 14px;
@@ -341,16 +341,19 @@ p{
 
 
 
-#anchor-links a{
+#anchor-links button{
 	background-color:  rgb(185, 117, 29) ;
 	padding-bottom: 12px;
 	padding-top: 9px;
 	padding-left: 14px;
 	padding-right: 14px;
 	margin: 5px;
+	font-family: inherit;
+	font-weight: bold;
 	text-decoration: none;
 	color: white;
 	font-size: 0.8em;
+	/* border: none; */
 	box-shadow: #00000037 3px 2px 4px;
 }
 
@@ -689,7 +692,7 @@ p{
 }
 
 #message-textarea{
-	width: 70vw;
+	width: 64vw;
 	height: 30vh;
 	font-size: 1em;
 	white-space: pre-wrap;
@@ -705,7 +708,7 @@ p{
 #message-save-button{
 	margin-top: 20px;
 	background-color: rgb(185, 117, 29) ;
-	border: none;
+	/* border: none; */
 	font-family: inherit;
 	font-weight: bold;
 	-webkit-font-kerning: 2em;
