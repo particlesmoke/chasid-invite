@@ -144,7 +144,8 @@ function dropOnePetalInWedding(){
 	// 		left-= (Math.random())*85
 	// }
 	img.style.left = `${left}vw`
-	img.style.animationName = `falling${petalDropCount%2 +1}`
+	// img.style.animationName = `falling${petalDropCount%2 +1}`
+	img.style.webkitAnimationName = `falling${petalDropCount%2 +1}`
 	petalDropCount++
 	setTimeout(()=>box.appendChild(img), Math.random()*2000)
 }
