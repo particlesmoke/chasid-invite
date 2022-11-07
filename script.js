@@ -185,6 +185,13 @@
     };
 }(this));
 
+if(jscd.os == 'iOS'){
+	document.querySelectorAll('.cursive').forEach((el)=>el.style.fontFamily = 'very-cursive-iphone')
+}
+
+var petalDropCount = 1
+var foolDropCount = 1
+var leafDropCount = 1
 
 const scene = document.getElementById('scene');
 const theme = document.getElementById('theme-color')
@@ -316,10 +323,10 @@ function dropOneFoolInHaldi(){
 			left-= (Math.random())*85
 	}
 	img.style.left = `${left}vw`
+	img.style.animationName = `fall${foolDropCount%2 +1}`
 	setTimeout(()=>box.appendChild(img), Math.random()*2000)
 }
 
-var petalDropCount = 1
 function dropOnePetalInWedding(){
 	const box = document.getElementById(`wedding-invite`).getElementsByClassName('droppings')[0]
 	const img = document.createElement('img')
@@ -343,7 +350,6 @@ function dropOnePetalInWedding(){
 	setTimeout(()=>box.appendChild(img), Math.random()*2000)
 }
 
-var leafDropCount = 1
 function dropOneLeafInMehendi(){
 	const box = document.getElementById(`mehendi-invite`).getElementsByClassName('droppings')[0]
 	const img = document.createElement('img')

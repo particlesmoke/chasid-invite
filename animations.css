@@ -100,13 +100,27 @@
 	}
 }
   
-@keyframes fall {
+@keyframes fall1 {
 	0%{
 		top:-10vh;
+		transform: translateX(0);
 	}
 
 	100%{
 		top:100vh;
+		transform: translateX(-16vw);
+		opacity: 0;
+	}
+}
+@keyframes fall2 {
+	0%{
+		top:-10vh;
+		transform: translateX(0);
+	}
+
+	100%{
+		top:100vh;
+		transform: translateX(-8vw);
 		opacity: 0;
 	}
 }

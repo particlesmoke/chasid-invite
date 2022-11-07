@@ -1,7 +1,10 @@
 @font-face {
 	font-family: very-cursive;
+	src: url('./Assets/adelia.otf');
+}
+@font-face {
+	font-family: very-cursive-iphone;
 	src: url('./Assets/bellania.ttf');
-	/* src: url('./Assets/adelia.otf'); */
 }
 @font-face {
 	font-family: little-serif-italics;
@@ -350,7 +353,7 @@ p{
 	margin: 5px;
 	font-family: inherit;
 	font-weight: bold;
-	text-decoration: none;
+	/* text-decoration: none; */
 	color: white;
 	font-size: 0.8em;
 	/* border: none; */
@@ -646,8 +649,8 @@ p{
 	position: absolute;
 	top:-4vh;
 	z-index: 4;
-	-webkit-animation-name: fall;
-	        animation-name: fall;
+	/* -webkit-animation-name: fall;
+	        animation-name: fall; */
 	-webkit-animation-duration: 5s;
 	        animation-duration: 5s;
 	-webkit-animation-fill-mode: forwards;
