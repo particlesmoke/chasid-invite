@@ -457,7 +457,7 @@ p{
 	top:0;
 	left: 50%;
 	transform: translate(-50%, 0) !important;
-	height:100vh
+	height:100%
 }
 
 @media (min-aspect-ratio: 1/1) { 
@@ -584,11 +584,10 @@ p{
 }
 
 .invite-page #ganesha-image{
-	/* position: absolute; */
-	margin-top: 3vh;
-	max-height: 13vh;
-	scale: 0.85;
-	/* transform: translateX(-16.7%) translateY(-12.7%); */
+	position: absolute;
+    height: 80%;
+    bottom: 0;
+    transform: translateX(-50%);
 }
 
 .line-break{
@@ -691,7 +690,7 @@ p{
 
 #message-textarea{
 	width: 70vw;
-	min-height: 50vh;
+	height: 30vh;
 	font-size: 1em;
 	white-space: pre-wrap;
 	padding: 10px;
@@ -763,7 +762,7 @@ iframe{
 	position: absolute;
 	-o-object-fit: contain;
 	   object-fit: contain;
-	opacity: 0.5;
+	opacity: 0.35;
 }
 
 
@@ -817,6 +816,9 @@ iframe{
 }
 
 @media (min-aspect-ratio: 1/1) { 
+	.invite-trinkets{
+		opacity: 0.5;
+	}
 	#mehendi-invite #mehendi-art{
 		max-height: 40vh;
 		left: 2vh;
