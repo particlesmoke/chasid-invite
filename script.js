@@ -24,7 +24,6 @@ new fullpage('#fullpage', {
 	onLeave: function(origin, destination, direction, trigger){
 		// if(origin=='home')
 		// scene.style.top='50px'
-		document.getElementsByTagName('audio')[0].play()
 		dropIntervals.forEach(interval=>clearInterval(interval))
 		if(destination.anchor=='mehendi' || destination.anchor=='haldi' || destination.anchor=='wedding') 
 		{
@@ -145,7 +144,7 @@ function dropOnePetalInWedding(){
 	// 		left-= (Math.random())*85
 	// }
 	img.style.left = `${left}vw`
-	img.style.animationName = `falling${petalDropCount%5 +1}`
+	img.style.animationName = `falling${petalDropCount%2 +1}`
 	petalDropCount++
 	setTimeout(()=>box.appendChild(img), Math.random()*2000)
 }

@@ -118,7 +118,8 @@
             /* translate3d(0,0,0) */
 			translateX(0)
 			translateY(0)
-            rotate3d(40deg);
+            /* rotate3d(40deg) */
+			;
 		opacity: 1;
     }
     
@@ -127,7 +128,8 @@
             /* translate3d(-75vw,100vh,0) */
 			translateX(-75vw)
 			translateY(100vh)
-            rotate3d(1,1,1, -40deg);
+            /* rotate3d(1,1,1, -40deg) */
+			;
         opacity: 0;
     }
 }
@@ -138,7 +140,8 @@
             /* translate3d(0,0,0) */
 			translateX(0)
 			translateY(0)
-            rotate3d(1,1,1, 90deg);
+            /* rotate3d(1,1,1, 90deg) */
+			;
 		opacity: 1;
     }
     
@@ -147,7 +150,8 @@
             /* translate3d(-45vw,100vh,0) */
 			translateX(-45vw)
 			translateY(100vh)
-            rotate3d(1,1,1, -50deg);
+            /* rotate3d(1,1,1, -50deg) */
+			;
         opacity: 0;
     }
 }
