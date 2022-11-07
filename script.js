@@ -186,7 +186,13 @@
 }(this));
 
 if(jscd.os == 'iOS'){
-	document.querySelectorAll('.cursive').forEach((el)=>el.style.fontFamily = 'very-cursive-iphone')
+	document.querySelectorAll('.cursive').forEach((el)=>{
+		el.style.fontFamily = 'very-cursive-iphone'
+		if(el.tagName == 'h1')
+			el.style.size.fontSize = '1.8em'
+		if(el.tagName == 'h3')
+			el.style.size.fontSize = '1.25em'
+	})
 }
 
 var petalDropCount = 1
