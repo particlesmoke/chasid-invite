@@ -213,7 +213,9 @@ var parallaxInstance = new Parallax(scene,{
 	limitX:50,
 	limitY:50,
 	// calibrateX :true,
-	selector:'.parallax'
+	selector:'.parallax',
+	frictionX:0.075,
+	frictionY:0.075
 });
 new fullpage('#fullpage', {
 	// nothing:console.log("here"),
