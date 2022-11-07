@@ -145,7 +145,7 @@ function dropOnePetalInWedding(){
 	// 		left-= (Math.random())*85
 	// }
 	img.style.left = `${left}vw`
-	img.style.animationName = `falling${petalDropCount%3 +1}`
+	img.style.animationName = `falling${petalDropCount%5 +1}`
 	petalDropCount++
 	setTimeout(()=>box.appendChild(img), Math.random()*2000)
 }
@@ -164,7 +164,7 @@ function dropOneLeafInMehendi(){
 	// 		left-= (Math.random())*85
 	// }
 	img.style.left = `${left}vw`
-	img.style.animationName = `falling${leafDropCount%3 +1}`
+	img.style.animationName = `falling${leafDropCount%5 +1}`
 	leafDropCount++
 	setTimeout(()=>box.appendChild(img), Math.random()*2000)
 }

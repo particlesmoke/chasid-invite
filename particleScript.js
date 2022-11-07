@@ -137,3 +137,12 @@ tsParticles.load("scene", {
 	  }
 	}
   });
+
+//   setInterval(()=>{
+// 	const confettiSound = document.createElement('audio')
+// 	confettiSound.src = '../../Assets/confetti.mp3'
+// 	confettiSound.volume = 0.1
+// 	// confettiSound.currentTime = 0
+// 	confettiSound.play()
+// 	document.body.appendChild(confettiSound)
+//   },3000)

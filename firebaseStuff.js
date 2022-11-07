@@ -20,8 +20,10 @@ const docRef = doc(db, "invitees", endpoint);
 const docSnap = (await getDoc(docRef)).data();
 const members = docSnap.Members
 
-if(docSnap.Message != null && docSnap.Message!='')
+if(docSnap.Message != null && docSnap.Message!=''){
 	document.getElementById("message-textarea").innerHTML= docSnap.Message
+	addSavedMessage("Thanks for your message! It has been saved")
+}
 
 const form = document.getElementById('presence-marker-form')
 
@@ -54,9 +56,13 @@ function addMember(name, checked){
 		console.log(checkedState)
 
 		let anyComing = false
+		let allComing = true
 		for(let name in checkedState){
 			if(checkedState[name]==true){
 				anyComing = true
+			}
+			if(checkedState[name]==false){
+				allComing = false
 			}
 		}
 		if(anyComing){
@@ -64,7 +70,13 @@ function addMember(name, checked){
 		}
 		else{
 			if(presenceMessageVisible)
-				removePresenceMessage()
+			removePresenceMessage()
+		}
+		if(allComing){
+			confettiInPresence()
+		}
+		else{
+			stopConfettiInPresence()
 		}
 	})
 	div.appendChild(inputEl)
@@ -79,7 +91,10 @@ document.getElementById("message-save-button").addEventListener('click',()=>{
 	let message = document.getElementById("message-textarea").value
 	if(message!=null && message!='')
 	{
-		addSavedMessage("Thanks for your message! It has been saved")
+		if(!savedMessageVisible)
+			addSavedMessage("Thanks for your message! Changes have been saved")
+		else
+			addSavedMessage("Thanks for your message! It has been saved")
 	}
 	else{
 		addSavedMessage("Please type a message before saving")
@@ -122,3 +137,149 @@ function addSavedMessage(text){
 // 	console.log(`${doc.id} => ${doc.data()}`);
 // 	console.log(doc.data())
 // })
+
+function confettiInPresence(){
+	tsParticles.load("presence-content", {
+	"fullScreen": {
+	  "zIndex": 1
+	},
+	"emitters": [
+	  {
+		"position": {
+		  "x": 0,
+		  "y": 30
+		},
+		"rate": {
+		  "quantity": 3,
+		  "delay": 0.1
+		},
+		"particles": {
+		  "move": {
+			"direction": "top-right",
+			"outModes": {
+			  "top": "none",
+			  "left": "none",
+			  "default": "destroy"
+			}
+		  }
+		}
+	  },
+	  {
+		"position": {
+		  "x": 100,
+		  "y": 30
+		},
+		"rate": {
+		  "quantity": 3,
+		  "delay": 0.1
+		},
+		"particles": {
+		  "move": {
+			"direction": "top-left",
+			"outModes": {
+			  "top": "none",
+			  "right": "none",
+			  "default": "destroy"
+			}
+		  }
+		}
+	  }
+	],
+	"particles": {
+	  "color": {
+		"value": [
+		  "#b8ffcc",
+		  "#8ff3ff",
+		  "#ffe187",
+		  "#ffe187"
+		]
+	  },
+	  "move": {
+		"decay": 0.05,
+		"direction": "top",
+		"enable": true,
+		"gravity": {
+		  "enable": true
+		},
+		"outModes": {
+		  "top": "none",
+		  "default": "destroy"
+		},
+		"speed": {
+		  "min": 10,
+		  "max": 50
+		}
+	  },
+	  "number": {
+		"value": 0
+	  },
+	  "opacity": {
+		"value": 1
+	  },
+	  "rotate": {
+		"value": {
+		  "min": 0,
+		  "max": 360
+		},
+		"direction": "random",
+		"animation": {
+		  "enable": true,
+		  "speed": 30
+		}
+	  },
+	  "tilt": {
+		"direction": "random",
+		"enable": true,
+		"value": {
+		  "min": 0,
+		  "max": 360
+		},
+		"animation": {
+		  "enable": true,
+		  "speed": 30
+		}
+	  },
+	  "size": {
+		"value": {
+		  "min": 0,
+		  "max": 2
+		},
+		"animation": {
+		  "enable": true,
+		  "startValue": "min",
+		  "count": 1,
+		  "speed": 16,
+		  "sync": true
+		}
+	  },
+	  "roll": {
+		"darken": {
+		  "enable": true,
+		  "value": 25
+		},
+		"enable": true,
+		"speed": {
+		  "min": 5,
+		  "max": 15
+		}
+	  },
+	  "wobble": {
+		"distance": 30,
+		"enable": true,
+		"speed": {
+		  "min": -7,
+		  "max": 7
+		}
+	  },
+	  "shape": {
+		"type": "circle",
+		"options": {}
+	  }
+	}
+  	});
+}
+
+function stopConfettiInPresence(){
+	const particles = tsParticles.domItem(1)
+	particles.destroy()
+}
