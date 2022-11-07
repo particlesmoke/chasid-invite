@@ -171,21 +171,17 @@
     
     0% {
         transform:
-            /* translate3d(0,0,0) */
-			translateX(0)
-			translateY(0)
-            /* rotate3d(40deg) */
-			;
+            translate3d(300,0,0)
+            rotate3d(40deg);
 		opacity: 1;
     }
-    
+    70% {
+		opacity: 1;
+	}
     100% {
         transform:
-            /* translate3d(-75vw,100vh,0) */
-			translateX(-75vw)
-			translateY(100vh)
-            /* rotate3d(1,1,1, -40deg) */
-			;
+            translate3d(-75vw,100vh,0)
+            rotate3d(1,1,1, -40deg);
         opacity: 0;
     }
 }
@@ -194,21 +190,17 @@
     
     0% {
         transform:
-            /* translate3d(0,0,0) */
-			translateX(0)
-			translateY(0)
-            /* rotate3d(40deg) */
-			;
+            translate3d(300,0,0)
+            rotate3d(40deg);
 		opacity: 1;
     }
-    
+    70% {
+		opacity: 1;
+	}
     100% {
         transform:
-            /* translate3d(-75vw,100vh,0) */
-			translateX(-75vw)
-			translateY(100vh)
-            /* rotate3d(1,1,1, -40deg) */
-			;
+            translate3d(-75vw,100vh,0)
+            rotate3d(1,1,1, -40deg);
         opacity: 0;
     }
 }
@@ -216,21 +208,17 @@
 @-webkit-keyframes falling3 {
      0% {
         transform:
-            /* translate3d(0,0,0) */
-			translateX(0)
-			translateY(0)
-            /* rotate3d(1,1,1, 90deg) */
-			;
+            translate3d(0,0,0)
+            rotate3d(1,1,1, 90deg);
 		opacity: 1;
     }
-    
+    70% {
+		opacity: 1;
+	}
     100% {
         transform:
-            /* translate3d(-45vw,100vh,0) */
-			translateX(-45vw)
-			translateY(100vh)
-            /* rotate3d(1,1,1, -50deg) */
-			;
+            translate3d(-45vw,100vh,0)
+            rotate3d(1,1,1, -50deg);
         opacity: 0;
     }
 }
@@ -238,21 +226,17 @@
 @keyframes falling3 {
      0% {
         transform:
-            /* translate3d(0,0,0) */
-			translateX(0)
-			translateY(0)
-            /* rotate3d(1,1,1, 90deg) */
-			;
+            translate3d(0,0,0)
+            rotate3d(1,1,1, 90deg);
 		opacity: 1;
     }
-    
+    70% {
+		opacity: 1;
+	}
     100% {
         transform:
-            /* translate3d(-45vw,100vh,0) */
-			translateX(-45vw)
-			translateY(100vh)
-            /* rotate3d(1,1,1, -50deg) */
-			;
+            translate3d(-45vw,100vh,0)
+            rotate3d(1,1,1, -50deg);
         opacity: 0;
     }
 }
@@ -260,17 +244,17 @@
 @-webkit-keyframes falling2 {
      0% {
         transform:
-            /* translate3d(0,0,0) */
-			translateX(0)
-			translateY(0)
+            translate3d(0,0,0)
             rotate3d(1,1,1,90deg);
 		opacity: 1;
     }
+	70% {
+		opacity: 1;
+	}
+    
     100% {
         transform:
             translate3d(-30vw,100vh,0)
-			translateX(-30vw)
-			translateY(100vh)
             rotate3d(1,1,1,180deg);
         opacity: 0;
     }
@@ -279,17 +263,17 @@
 @keyframes falling2 {
      0% {
         transform:
-            /* translate3d(0,0,0) */
-			translateX(0)
-			translateY(0)
+            translate3d(0,0,0)
             rotate3d(1,1,1,90deg);
 		opacity: 1;
     }
+	70% {
+		opacity: 1;
+	}
+    
     100% {
         transform:
             translate3d(-30vw,100vh,0)
-			translateX(-30vw)
-			translateY(100vh)
             rotate3d(1,1,1,180deg);
         opacity: 0;
     }
@@ -297,80 +281,74 @@
 
 @-webkit-keyframes falling4 {
 	0% {
-		transform:
-		   /* translate3d(0,0,0) */
-			translateX(0)
-			translateY(0)
-			rotate3d(1,1,1,0deg);
+	   transform:
+		   translate3d(0,0,0)
+		   rotate3d(1,1,1,0deg);
 		opacity: 1;
    }
-
+   70% {
+	   opacity: 1;
+   }
    
    100% {
-		transform:
-		   /* translate3d(-65vw,100vh,0) */
-			translateX(-65vw)
-			translateY(100vh)
-			rotate3d(1,1,1,-140deg);
-		opacity: 0;
+	   transform:
+		   translate3d(-65vw,100vh,0)
+		   rotate3d(1,1,1,-140deg);
+	   opacity: 0;
    }
 }
 
 @keyframes falling4 {
 	0% {
-		transform:
-		   /* translate3d(0,0,0) */
-			translateX(0)
-			translateY(0)
-			rotate3d(1,1,1,0deg);
+	   transform:
+		   translate3d(0,0,0)
+		   rotate3d(1,1,1,0deg);
 		opacity: 1;
    }
-
+   70% {
+	   opacity: 1;
+   }
    
    100% {
-		transform:
-		   /* translate3d(-65vw,100vh,0) */
-			translateX(-65vw)
-			translateY(100vh)
-			rotate3d(1,1,1,-140deg);
-		opacity: 0;
+	   transform:
+		   translate3d(-65vw,100vh,0)
+		   rotate3d(1,1,1,-140deg);
+	   opacity: 0;
    }
 }
 @-webkit-keyframes falling5 {
 	0% {
 	   transform:
-		   /* translate3d(0,0,0) */
-		   translateX(0)
-		   translateY(0)
+		   translate3d(0,0,0)
 		   rotate3d(1,1,1,140deg);
 		opacity: 1;
    }
-
+   70% {
+	   opacity: 1;
+   }
+   
    100% {
 	   transform:
-			/* translate3d(-55vw,100vh,0) */
-			translateX(-55vw)
-			translateY(100vh)
-			rotate3d(1,1,1,-90deg);
+		   translate3d(-55vw,100vh,0)
+		   rotate3d(1,1,1,-90deg);
 	   opacity: 0;
    }
 }
 @keyframes falling5 {
 	0% {
 	   transform:
-		   /* translate3d(0,0,0) */
-		   translateX(0)
-		   translateY(0)
+		   translate3d(0,0,0)
 		   rotate3d(1,1,1,140deg);
 		opacity: 1;
    }
-
+   70% {
+	   opacity: 1;
+   }
+   
    100% {
 	   transform:
-			/* translate3d(-55vw,100vh,0) */
-			translateX(-55vw)
-			translateY(100vh)
-			rotate3d(1,1,1,-90deg);
+		   translate3d(-55vw,100vh,0)
+		   rotate3d(1,1,1,-90deg);
 	   opacity: 0;
    }
 }
