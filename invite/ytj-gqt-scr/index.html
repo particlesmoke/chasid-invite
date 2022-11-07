@@ -97,10 +97,10 @@
 			<div id="anchor-links">
 				
 				
-				<a href="#wedding">Wedding</a>
-				<a href="#rsvp">RSVP</a>
-				<a href="#message">Message Board</a>
-				<a href="#map">Map</a>
+				<button onclick="window.location.replace('#wedding')"  >Wedding</button>
+				<button onclick="window.location.replace('#rsvp')"  >RSVP</button>
+				<button onclick="window.location.replace('#message')"  >Message Board</button>
+				<button onclick="window.location.replace('#map')"  >Map</button>
 			</div>
 			<img id="peacock-bg" src="../../Assets/Peacock-bg.png" alt="">
 			<img id="peacock-fg" src="../../Assets/Peacock-fg.png" alt="">
@@ -125,7 +125,7 @@
 		</div>
 		
 		
-		<div class="section invite-page" id="wedding-invite" data-anchor="wedding" style="background-image: url('../../Assets/invite-bg-fg.png'), linear-gradient(180deg, rgba(189,41,24,1) 0%, rgba(152,2,37,1) 15%);">
+		<div class="section invite-page" id="wedding-invite" data-anchor="wedding" style="background-image: url('../../Assets/invite-bg-fg.png'), linear-gradient(180deg, rgba(189,41,24,1) 0%, rgba(152,2,37,1) 15%); z-index: 2;">
 			<div class="box">
 				<img src="../../Assets/palki-art.png" class="invite-trinkets" id="palki-art">
 				<div class="down-arrow">
@@ -200,7 +200,7 @@
 			<div class="content" id="map-content">
 				<p style="font-weight: bold;" class="little-serif-big" >Directions</p> 
 				<img src="../../Assets/line-break.png" class="line-break">
-				<br>
+				<!-- <br> -->
 				<iframe
 					frameborder="0" style="border:0; padding: 30px;"
 					referrerpolicy="no-referrer-when-downgrade"
