@@ -747,6 +747,7 @@ p{
 #presence-marker-form label{
 	padding-top: 0.25rem;
 	padding-left: 0.25em;
+	max-width: 55vw;
 }
 #presence-marker-form div{
 	display: flex;
