@@ -194,6 +194,10 @@ if(jscd.os == 'iOS'){
 			el.style.size.fontSize = '1.25em'
 	})
 }
+// if(jscd.mobile){
+	// document.addEventListener('visibilitychange', (ev)=>console.log(ev))
+	// document.window.addEventListener('blur', (ev)=>console.log(ev))
+	// }
 
 var petalDropCount = 1
 var foolDropCount = 1
